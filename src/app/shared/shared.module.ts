@@ -5,7 +5,6 @@ import { DatepickerRangeInputComponent } from '../components/datepicker-range-in
 import { OutputDatepickerRangeComponent } from '../components/output-datepicker-range/output-datepicker-range.component';
 import { NgbModule, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { CustomDateParserFormatterService } from '../services/custom-date-format.service';
-import { OutputDatepickerRangeService } from '../services/output-datepicker-range.service';
 import { FullLengthDateFormatPipe } from '../pipes/full-length-date-format.pipe';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { FullLengthDateFormatPipe } from '../pipes/full-length-date-format.pipe'
   providers: [
     {provide: NgbDateParserFormatter, useClass: CustomDateParserFormatterService,
     },
-    OutputDatepickerRangeService
   ],
 })
 export class SharedModule {}
