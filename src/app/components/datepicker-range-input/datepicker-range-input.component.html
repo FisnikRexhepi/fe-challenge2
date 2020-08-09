@@ -1,0 +1,36 @@
+<form class="form-inline">
+  <div class="form-group">
+    <div class="input-group">
+      <input name="datepicker" 
+         class="form-control" 
+         #myRangeInput
+         ngbDatepicker 
+         #datepicker="ngbDatepicker"
+         [autoClose]="true"
+         [displayMonths]="2"
+         [dayTemplate]="t"
+         [outsideDays]="'hidden'"
+         [startDate] = "fromDate!"
+         [maxDate]="maxDate"
+         [minDate]="minDate"
+         placeholder="dd. mmm yyyy - dd. mmm yyyy"
+         autocomplete="off">
+
+        <ng-template #t let-date="date" let-focused="focused">
+            <span class="custom-day"
+                [class.range]="isFrom(date) || isTo(date) || isInside(date) || isHovered(date)"
+                [class.faded]="isHovered(date) || isInside(date)"
+                (click)="onDateSelection(date, $event.target)"
+                (mouseenter)="hoveredDate = date"
+                (mouseleave)="hoveredDate = null">
+            {{ date.day }}
+            </span>
+        </ng-template>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button">
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+

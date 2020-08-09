@@ -1,0 +1,15 @@
+@import '../../../styles/global/colors';
+
+.date-ranges-wrapper{
+    background-color: $color-main-dark-gray;
+    width: 400px;
+}
+
+.header-title{
+	font-family:'Open Sans' !important;
+	font-weight: normal !important;
+}
+
+.card{ 
+ border-radius: 0px !important;
+}

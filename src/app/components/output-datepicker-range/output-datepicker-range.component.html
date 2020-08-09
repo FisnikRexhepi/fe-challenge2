@@ -1,0 +1,13 @@
+<div *ngIf="arrayDatesRanges.length > 0" class="date-ranges-wrapper">
+  <div class="card">
+    <div class="card-header text-center">
+      <h4 class="header-title">Selected Dates</h4>
+    </div>
+    <ul class="list-group list-group-item-dark">
+      <li *ngFor="let value of arrayDatesRanges" class="list-group-item text-center alert-secondary">
+        {{value[0] | fullLengthDateFormat}} -
+        {{value[1] | fullLengthDateFormat}}
+      </li>
+    </ul>
+  </div>
+</div>

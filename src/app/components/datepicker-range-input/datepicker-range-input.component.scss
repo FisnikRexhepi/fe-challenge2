@@ -1,0 +1,53 @@
+@import '~src/styles/global/colors.scss';
+
+
+.form-inline {
+    margin-bottom: 12px;
+    background-color: $color-main-dark-blue !important;
+}
+
+::placeholder{
+  color: $color-main-dark-gray !important;
+}
+
+
+button.calendar, button.calendar:active {
+    width: 2.75rem;
+    background-image: url('../../../assets/images/calendar.png')!important;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 50px;
+    background-position: 50%;
+}
+
+
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: $color-main-dark-blue !important;
+    border-width: 1px !important;
+    color: $color-main-gray !important;
+    width: 261px;
+    height: 50px;
+}
+.input-group > .input-group-append > .btn {
+    border-color: $color-main-gray;
+}
+
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+  }

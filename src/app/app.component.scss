@@ -1,6 +1,29 @@
+@import '~src/styles/global/colors.scss';
+
 .sidebar{
 	background: green;
 	height: 100%;
-	width: 300px;
+	width: 400px;
 	padding: 10px;
+}
+
+.main-wrapper{
+ background-color: $color-main-dark-blue;
+ width: 350px;
+ margin:0 auto;
+ height: 204px;
+}
+
+.datepickers-wrapper{
+	margin: 0 auto;
+	width: 310px;
+	padding-left: 0px;
+}
+
+.time-range-title{
+	color: $color-main-gray;
+	font-family:'Open Sans';
+	font-weight: lighter !important;
+	margin-bottom: 23px;
+	padding-top: 26px;
 }

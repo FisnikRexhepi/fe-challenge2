@@ -1,4 +1,11 @@
 <div class="sidebar">
   <p>Sidebar</p>
-  
+  <div class="main-wrapper">
+    <div class="datepickers-wrapper">
+      <h4 class="time-range-title">TIME RANGE</h4>
+      <app-datepicker-input (newItemEvent) = "addFirstDateRange($event)"></app-datepicker-input>
+      <app-datepicker-input (newItemEvent) = "addSecondDateRange($event)"></app-datepicker-input>
+    </div>
+  </div>
 </div>
+<app-output-datepicker-range [arrayDatesRanges] = "arrayDateRanges" ></app-output-datepicker-range>
