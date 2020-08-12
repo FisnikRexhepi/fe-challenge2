@@ -69,8 +69,15 @@ export class DatepickerRangeInputComponent implements OnInit {
       this.fromDate = date;
     } else if (this.fromDate && !this.toDate && after(date, this.fromDate)) {
       this.toDate = date;
-      this.input.close();
-    } else {
+      this.closeDatePickerInput();
+    }
+    // user choosed to select same date instead of a range date.
+     else if (this.fromDate === date) {
+      this.toDate = date;
+      this.closeDatePickerInput();
+    }
+
+     else {
       this.toDate = null;
       this.fromDate = date;
     }
@@ -80,4 +87,9 @@ export class DatepickerRangeInputComponent implements OnInit {
     this.renderer.setProperty(this.myRangeInput.nativeElement, 'value', parsed);
     this.newItemEvent.emit({ fromDate: this.fromDate, toDate: this.toDate });
   }
+  closeDatePickerInput(): void {
+    this.input.close();
+  }
 }
+
+
